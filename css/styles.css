@@ -147,6 +147,18 @@ svg {
   margin: 0;
 }
 
+.privacy-accept {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.privacy-link {
+  color: var(--link-button-color);
+  text-decoration-line: underline;
+}
+
 /* header */
 .head {
   border-bottom: 1px solid #ececec;
@@ -822,6 +834,8 @@ svg {
 
 .summon {
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
 }
 
@@ -849,6 +863,7 @@ svg {
   letter-spacing: 0.06em;
   background-color: var(--link-button-color);
   color: var(--second-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .send {
