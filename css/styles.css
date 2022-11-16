@@ -751,6 +751,7 @@ svg {
   width: 358px;
   height: 50px;
   background-color: var(--hero-footer-bgc);
+  color: var(--second-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -789,7 +790,7 @@ svg {
   background: rgba(0, 0, 0, 0.2);
 
   opacity: 1;
-  transition: opacity 250ms var(--cubic-bezier);
+  transition: opacity 250ms var(--cubic-bezier), visibility 250ms var(--cubic-bezier);
 }
 
 .backdrop.is-hidden {
@@ -842,7 +843,7 @@ svg {
 }
 
 .modal-title {
-  margin-bottom: 5px;
+  margin-bottom: 12px;
 
   font-weight: 700;
   font-size: 20px;
@@ -896,16 +897,16 @@ svg {
   border-radius: 4px;
 }
 
-.modal-input:focus-visible{
+.modal-input:focus-visible {
   outline: none;
   border: 1px solid var(--link-button-color);
 }
 
-.modal-input:focus-visible ~ .modal-svg{
+.modal-input:focus-visible ~ .modal-svg {
   fill: var(--link-button-color);
 }
 
-.form-message{
+.form-message {
   transition: border 250ms var(--cubic-bezier);
   resize: none;
 
@@ -921,7 +922,15 @@ svg {
   border-radius: 4px;
 }
 
-.form-message:focus-visible{
+.form-message::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-message:focus-visible {
   outline: none;
   border: 1px solid var(--link-button-color);
 }
@@ -931,36 +940,48 @@ svg {
   text-align: center;
 }
 
-.modal-checkbox{
+.modal-checkbox {
   appearance: none;
 
   width: 16px;
-  height: 15px; 
+  height: 15px;
 }
 
-.checkbox-icon .uncheck{
+.accept-label{
+  position: relative;
+}
+
+.checkbox-icon{
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+.checkbox-icon .uncheck {
   opacity: 1;
   transition: opacity 250ms var(--cubic-bezier);
 }
 
-.modal-checkbox:checked + .checkbox-icon .uncheck{
+.modal-checkbox:checked + .checkbox-icon .uncheck {
   opacity: 0;
 }
 
-.checkbox-icon .check{
+.checkbox-icon .check {
   opacity: 0;
   transition: opacity 250ms var(--cubic-bezier);
 }
 
-.modal-checkbox:checked + .checkbox-icon .check{
-  opacity: 1;
+.modal-checkbox:checked + .checkbox-icon .check {
+  opacity:1;
 }
 
 .privacy-accept {
+
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  color: var(--dis-link-color);
 }
 
 .privacy-link {
